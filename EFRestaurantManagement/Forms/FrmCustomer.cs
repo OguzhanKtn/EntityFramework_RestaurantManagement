@@ -1,5 +1,6 @@
 using EFRestaurantManagement.Models.ORM;
 using EFRestaurantManagement.Services;
+using Microsoft.IdentityModel.Tokens;
 
 namespace EFRestaurantManagement
 {
@@ -14,11 +15,26 @@ namespace EFRestaurantManagement
         private void btnCustomerAdd_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer();
-            customer.Name = txtCustomerName.Text;
-            customer.Surname = txtCustomerSurname.Text;
-            customer.Email = txtEmail.Text;
-            customer.Phone = txtPhone.Text;
-            customer.Adress = txtAdress.Text;
+            
+            var name = txtCustomerName.Text.Trim();
+            var surname = txtCustomerSurname.Text.Trim();
+            var email = txtEmail.Text.Trim();
+            var phone = txtPhone.Text.Trim();
+            var address = txtAdress.Text.Trim();
+
+           if(name.IsNullOrEmpty() || surname.IsNullOrEmpty() || email.IsNullOrEmpty() || phone.IsNullOrEmpty() || address.IsNullOrEmpty())
+            {
+                MessageBox.Show("Please fill the all fields !");
+                return;
+            }
+            else
+            {
+                customer.Name = name;
+                customer.Surname = surname;
+                customer.Email = email;
+                customer.Phone = phone;
+                customer.Adress = address;
+            }
 
             try
             {
@@ -64,10 +80,16 @@ namespace EFRestaurantManagement
         Customer updatedCustomer;
         private void btnCustomerUpdate_Click(object sender, EventArgs e)
         {
-            updatedCustomer.Adress = txtUpdateAddress.Text;
-            updatedCustomer.Email = txtUpdateEmail.Text;
-            updatedCustomer.Phone = txtUpdatePhone.Text;
-
+            if(txtUpdateAddress.Text.IsNullOrEmpty() || txtUpdatePhone.Text.IsNullOrEmpty() || txtUpdateEmail.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("Please fill the all fields !");
+            }
+            else
+            {
+                updatedCustomer.Adress = txtUpdateAddress.Text;
+                updatedCustomer.Email = txtUpdateEmail.Text;
+                updatedCustomer.Phone = txtUpdatePhone.Text;
+            }
             customerService.CustomerUpdate(updatedCustomer);
             LoadData() ;
         }

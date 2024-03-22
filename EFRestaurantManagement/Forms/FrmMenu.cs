@@ -1,5 +1,6 @@
 ﻿using EFRestaurantManagement.Models.ORM;
 using EFRestaurantManagement.Services;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,11 +32,20 @@ namespace EFRestaurantManagement.Forms
         private void txtMenuAdd_Click(object sender, EventArgs e)
         {
             Menu menu = new Menu();
-            menu.Title = txtTitle.Text;
-            menu.Description = txtDescription.Text;
-            menu.Price = Convert.ToInt32(txtPrice.Text);
 
+            if (txtTitle.Text.IsNullOrEmpty() || txtDescription.Text.IsNullOrEmpty() || txtPrice.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("Please fill the all fields !");
+                return;
+            }
+            else
+            {
+                menu.Title = txtTitle.Text.Trim();
+                menu.Description = txtDescription.Text.Trim();
+                menu.Price = Convert.ToInt32(txtPrice.Text.Trim());
+            }
             menuService.Add(menu);
+            MessageBox.Show("Menu added successfully !");
             LoadData();
         }
 
@@ -44,6 +54,7 @@ namespace EFRestaurantManagement.Forms
             int id = (int)dataGridView1.CurrentRow.Cells["Id"].Value;
 
             menuService.Delete(id);
+            MessageBox.Show("Menu deleted successfully !");
             LoadData();
         }
 
@@ -60,8 +71,17 @@ namespace EFRestaurantManagement.Forms
 
         private void btnMenuUpdate_Click(object sender, EventArgs e)
         {
-            menu.Price = decimal.Parse(txtUpdatedPrice.Text);
+            if (txtUpdatedPrice.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("Please fill the field !");
+                return;
+            }
+            else
+            {
+                menu.Price = decimal.Parse(txtUpdatedPrice.Text.Trim());
+            }
             menuService.Update(menu);
+            MessageBox.Show("Menu updated successfully !");
             LoadData();
         }
     }

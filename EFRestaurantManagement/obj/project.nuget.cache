@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cuECo7kNTIvlKze2IB3fnYrFWTeK4sKJ0unvR9UURvd2BoVVKTWRBXvfNCYwuOQ3zo6gLJdD78BVURTdJLvwVg==",
+  "dgSpecHash": "FwQkefwHC3GyxmWXa4oXSfwvJUvLzuO7GzFJjSrnbsFVyp7wR1DqJGBg+FYl+qw+Qr43N7aXPTErZovFdO8RBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Oğuzhan\\source\\repos\\EFRestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj",
+  "projectFilePath": "C:\\Users\\Oğuzhan\\Documents\\GitHub\\EntityFramework_RestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Oğuzhan\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Oğuzhan\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

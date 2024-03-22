@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Oğuzhan\\source\\repos\\EFRestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj": {}
+    "C:\\Users\\Oğuzhan\\Documents\\GitHub\\EntityFramework_RestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Oğuzhan\\source\\repos\\EFRestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj": {
+    "C:\\Users\\Oğuzhan\\Documents\\GitHub\\EntityFramework_RestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Oğuzhan\\source\\repos\\EFRestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Oğuzhan\\Documents\\GitHub\\EntityFramework_RestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj",
         "projectName": "EFRestaurantManagement",
-        "projectPath": "C:\\Users\\Oğuzhan\\source\\repos\\EFRestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj",
+        "projectPath": "C:\\Users\\Oğuzhan\\Documents\\GitHub\\EntityFramework_RestaurantManagement\\EFRestaurantManagement\\EFRestaurantManagement.csproj",
         "packagesPath": "C:\\Users\\Oğuzhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Oğuzhan\\source\\repos\\EFRestaurantManagement\\EFRestaurantManagement\\obj\\",
+        "outputPath": "C:\\Users\\Oğuzhan\\Documents\\GitHub\\EntityFramework_RestaurantManagement\\EFRestaurantManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Oğuzhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
