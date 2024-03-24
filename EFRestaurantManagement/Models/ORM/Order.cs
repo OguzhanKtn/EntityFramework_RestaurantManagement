@@ -11,7 +11,7 @@ namespace EFRestaurantManagement.Models.ORM
         public Reservation Reservation { get; set; }
         public int? MenuId { get; set; }
         public Menu Menu { get; set; }
-        public DateTime OrderDate { get; set; } = DateTime.Now;
+        public DateTime OrderDate { get; set; }
         public int Quantity { get; set; }
     }
 }

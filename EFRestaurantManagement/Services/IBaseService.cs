@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace EFRestaurantManagement.Services
 {
-    public interface IMenuService
+    public interface IBaseService<T>
     {
-        public void Add(Menu menu);
+        public void Add(T item);
+        public List<T> GetAll();
+        public void Update(T item);
         public void Delete(int id);
-        public void Update(Menu menu);
-        public List<Menu> GetAll();
-        
     }
 }

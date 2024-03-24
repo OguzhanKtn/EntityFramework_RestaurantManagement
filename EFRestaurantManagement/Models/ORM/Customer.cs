@@ -17,5 +17,7 @@ namespace EFRestaurantManagement.Models.ORM
         [MaxLength(15)]
         public string Phone { get; set; }
         public string? Adress { get; set; }
+
+        public string FullName => $"{Name} {Surname}";
     }
 }

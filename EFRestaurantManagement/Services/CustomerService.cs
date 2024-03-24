@@ -4,23 +4,23 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace EFRestaurantManagement.Services
 {
-    public class CustomerService : ICustomerService
+    public class CustomerService : IBaseService<Customer>
     {
         RestaurantContext db = new RestaurantContext();
-        public void CustomerAdd(Customer customer)
+        public void Add(Customer customer)
         {
             db.Customers.Add(customer);
             db.SaveChanges();
         }
 
-        public void CustomerDelete(int id)
+        public void Delete(int id)
         {
             Customer customer = db.Customers.Find(id)!;
-            db.Customers.Remove(customer);
+            customer.IsDeleted = true;
             db.SaveChanges();
         }
 
-        public void CustomerUpdate(Customer customer)
+        public void Update(Customer customer)
         {
             Customer cstmr = db.Customers.Find(customer.Id)!;
             cstmr.Email = customer.Email;
@@ -32,7 +32,7 @@ namespace EFRestaurantManagement.Services
 
         public List<Customer> GetAll()
         {
-            List<Customer> customers = db.Customers.ToList();
+            List<Customer> customers = db.Customers.Where(x=> x.IsDeleted == false).ToList();
             
            if(customers.Count > 0)
             {

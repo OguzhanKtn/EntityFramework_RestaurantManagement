@@ -38,7 +38,7 @@ namespace EFRestaurantManagement
 
             try
             {
-                customerService.CustomerAdd(customer);
+                customerService.Add(customer);
                 MessageBox.Show("Customer added successfully !");
                 LoadData();
             }
@@ -65,7 +65,7 @@ namespace EFRestaurantManagement
             try
             {
                 int id = (int)dataGridView1.CurrentRow.Cells["Id"].Value;
-                customerService.CustomerDelete(id);
+                customerService.Delete(id);
 
                 MessageBox.Show("Customer deleted succesfully !");
                 LoadData();
@@ -90,7 +90,7 @@ namespace EFRestaurantManagement
                 updatedCustomer.Email = txtUpdateEmail.Text;
                 updatedCustomer.Phone = txtUpdatePhone.Text;
             }
-            customerService.CustomerUpdate(updatedCustomer);
+            customerService.Update(updatedCustomer);
             LoadData() ;
         }
 

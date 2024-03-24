@@ -261,3 +261,5 @@ C:\Users\Oğuzhan\Documents\GitHub\EntityFramework_RestaurantManagement\EFRestau
 C:\Users\Oğuzhan\Documents\GitHub\EntityFramework_RestaurantManagement\EFRestaurantManagement\obj\Debug\net8.0-windows\EFRestaurantManagement.pdb
 C:\Users\Oğuzhan\Documents\GitHub\EntityFramework_RestaurantManagement\EFRestaurantManagement\obj\Debug\net8.0-windows\EFRestaurantManagement.genruntimeconfig.cache
 C:\Users\Oğuzhan\Documents\GitHub\EntityFramework_RestaurantManagement\EFRestaurantManagement\obj\Debug\net8.0-windows\ref\EFRestaurantManagement.dll
+C:\Users\Oğuzhan\Documents\GitHub\EntityFramework_RestaurantManagement\EFRestaurantManagement\obj\Debug\net8.0-windows\EFRestaurantManagement.Forms.FrmReservation.resources
+C:\Users\Oğuzhan\Documents\GitHub\EntityFramework_RestaurantManagement\EFRestaurantManagement\obj\Debug\net8.0-windows\EFRestaurantManagement.Forms.FrmOrder.resources

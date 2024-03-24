@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EFRestaurantManagement.Services
 {
-    public class MenuService : IMenuService
+    public class MenuService : IBaseService<Menu>
     {
         RestaurantContext db = new RestaurantContext();
         public void Add(Menu menu)
@@ -19,13 +19,13 @@ namespace EFRestaurantManagement.Services
         public void Delete(int id)
         {
             Menu menu = db.Menus.Find(id)!;
-            db.Menus.Remove(menu);
+            menu.IsDeleted = true;
             db.SaveChanges();
         }
 
         public List<Menu> GetAll()
         {
-            List<Menu> menus = db.Menus.ToList();
+            List<Menu> menus = db.Menus.Where(x=>x.IsDeleted == false).ToList();
             return menus;
         }
 
